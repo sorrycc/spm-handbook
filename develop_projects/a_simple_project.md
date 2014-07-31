@@ -62,7 +62,7 @@ $('body').append('<div>Hello World!</div>');
 
 ## 调试
 
-项目调试需要安装 spm-server，用于开启服务器进行本地调试：
+项目调试需要安装 [spm-server](https://github.com/spmjs/spm-server)，用于开启服务器进行本地调试：
 
 ```bash
 $ npm install spm-server -g
