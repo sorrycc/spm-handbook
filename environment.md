@@ -18,7 +18,7 @@ $ nvm alias default 0.10.24
 
 ### 去除 sudo
 
-**如果你是用 nvm 来安装的 node，可跳过步骤。**
+**如果你是用 nvm 来安装的 node，请跳过步骤。**
 
 使用 npm 安装模块的时候经常要输入 sudo，还要输入密码，这点很让人烦躁。下面你可以简单粗暴的去除 sudo（看看作者的[软文](http://howtonode.org/introduction-to-npm)）
 

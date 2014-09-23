@@ -1,5 +1,5 @@
 
-# spm-server
+# spm-server ([source](https://github.com/spmjs/spm-server))
 
 > 如果不喜欢本地启 server 的调试方法，可以试下 [seajs-wrap](https://github.com/seajs/seajs-wrap) 。
 
@@ -17,7 +17,7 @@
 
 - 支持 `https`
 
-    通过添加参数 `--https` 开启。在你的线上 assets 服务器是 https 协议，并且需要调试线上问题时使用。
+    通过添加参数 `--https` 开启。线上 assets 服务器是 https 协议，且需要调试线上问题时使用。
 
 - 支持 `less` 和 `coffeescript`
 
@@ -46,7 +46,7 @@ $ spm-server [OPTIONS]
 - standalone
     - [单独引入入口模块](https://github.com/spmjs/spm-server/blob/master/test/fixtures/standalone/normal.html)
     - [combo 引入入口模块和其他 JS 文件](https://github.com/spmjs/spm-server/blob/master/test/fixtures/standalone/combo.html)
-    - [combo 引入入口模块和其他 JS 文件](https://github.com/spmjs/spm-server/blob/master/test/fixtures/standalone/taobao.html)，运行 `spm-server` 时指定 `base`
+    - [base 不是根目录](https://github.com/spmjs/spm-server/blob/master/test/fixtures/standalone/taobao.html)，运行 `spm-server` 时指定 `base`
 
 ## 路径规则
 

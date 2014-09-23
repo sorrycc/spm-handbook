@@ -27,7 +27,7 @@ $ npm install spm -g
 
 > `npm install spm@2.x -g` for old spm2.
 
-## 基本操作
+## 使用
 
 初始化组件：
 
