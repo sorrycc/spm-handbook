@@ -18,7 +18,7 @@
   * [引入样式](develop-package/include-css.md)
   * [引入模板](develop-package/include-template.md)
   * [引入组件内部文件](develop-package/include-package-files.md)
-  * 组件类型
+  * [组件类型](develop-package/package-type.md)
 * [项目开发](develop-project/README.md)
   * [应用 Bootstrap](develop-project/using-bootstrap.md)
   * [调试：spm-server](develop-project/spm-server.md)

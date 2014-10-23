@@ -2,15 +2,14 @@
 
 ---
 
-`spm` use the exactly same file `package.json` as `npm` to descripe a package, sharing most fileds, expect an extra `spm` filed for containing some custom attributes.
+`spm` 使用和 `npm` 基本一致的 `package.json` 来描述组件。除了包含一些特殊配置的 `spm` 域之外，其他都和 `npm` 保持一致。
 
 ### Fields
 
 Field | Description |
 ------------ | ------------- |
-name* | name of your package, all lowercase, use a `-` or `.` as a separator between words
-version* | Semantic Versioning like 1.0.0
-private | prevent accidental publication of private repositories, default `false`
+name* | 组件名，全部小写，以 `-` 或 `.` 分隔单词
+version* | 语义化的版本号，比如 1.0.0
 description | a brief description of your package
 keywords | an array contains keywords
 homepage | url of your package's website
@@ -20,15 +19,16 @@ repository | Specify the place where your code lives. `{ "type": "git", "url": "
 bugs | The url to your project's issue tracker and / or the email address to which issues should be reported.
 license | license
 **spm*** |
-spm.main | the only entry point of package, default `index.js`, or could be set to `index.css` for a css only package 
-spm.output | an array of other files need to output
-spm.dependencies | specify dependencies relation of the package
-spm.devDependencies | specify dependencies relation of the package in developing situation
-spm.tests | specify all test files, support glob patterns: `tests/*-spec.js`
-spm.buildArgs | specify the cli arguments for `spm build`
-spm.ignore | an array of ignore files in package, same function as `.spmignore`
+spm.main | 组件的唯一入口，默认为 `index.js`，如果是一个 css 组件，可以设置为 `index.css`
+spm.output | 指定构建输出的文件，以数组表示，支持 glob 格式：`src/**/*.js`
+spm.dependencies | 指定依赖组件
+spm.devDependencies | 指定开发状态下的依赖组件
+spm.tests | 指定测试文件，支持 glob 格式：`tests/*-spec.js`
+spm.buildArgs | 配置 `spm build` 的命令行参数
+spm.registry | 指定组件发布的目标源，默认为 `http://spmjs.io`
+spm.ignore | 发布到源上时需要忽略的文件，以数组表示，功能同 `.spmignore`
 
-### A basic example
+### 一个简单的例子
 
 ```json
 {
@@ -69,7 +69,10 @@ spm.ignore | an array of ignore files in package, same function as `.spmignore`
       "expect.js": "0.3.1"
     },
     "tests": "tests/*-spec.js",
-    "ignore": ["dist"],
+    "ignore": [
+      "dist",
+      "_site"
+    ],
     "buildArgs": "--ignore jquery"
   }
 }
