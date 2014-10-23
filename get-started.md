@@ -7,7 +7,7 @@
 
 ![SPM LOGO](https://i.alipayobjects.com/i/localhost/png/201404/2YQxOTYoFp.png)
 
-所有 `spmjs.io` 上的组件都是以 CommonJS 的方式组织，并通过 [Sea.js](https://github.com/seajs/seajs) 运行的。同时，我们基于 [spm](https://github.com/spmjs/spm) 提供了一套完整的组件生命周期管理方案，包含以下特性：
+所有 `源：spmjs.io` 上的组件都是以 CommonJS 的方式组织，并可以通过 [seajs](http://seajs.org/) 加载运行。同时，我们基于 [spm](https://github.com/spmjs/spm) 提供了一套完整的组件生命周期管理方案，包含以下特性：
 
 - 初始化
 - 依赖安装
@@ -17,7 +17,7 @@
 - 文档服务
 - 构建
 
-[spmjs.io](http://spmjs.io/) 是针对 spm 的组件管理服务。你可以在这里搜索需要的组件，也可以发布组件到这里。
+[spmjs.io](http://spmjs.io/) 是针对 spm 的组件管理服务。你可以在这里搜索需要的组件，也可以发布组件到这里。如果需要，你还可以搭建自己的私有源服务或镜像。
 
 ## 安装
 
@@ -25,9 +25,11 @@
 $ npm install spm -g
 ```
 
-> `npm install spm@2.x -g` for old spm2.
+> 如果遇到安装问题，请先确认 [环境配置](environment.html) 是否正确，以及搜索下 [别人踩过的安装坑](https://github.com/spmjs/spm/search?q=install&type=Issues&utf8=%E2%9C%93)。
 
 ## 使用
+
+> 以下是组件开发的入门，你也可以直接跳到[应用开发](develop-project/README.html)。
 
 初始化组件：
 
@@ -52,7 +54,7 @@ $ spm publish
 
 > 你可能需要先执行 `spm login` 来获取权限，登录 [spmjs.io](http://spmjs.io) 之后在 http://spmjs.io/account 可以找到 `authkey`。
 
-如果组件包的尺寸过大，可以添加 `.spmignore` 来过滤掉不需要的文件。
+如果组件包的尺寸过大，可以添加 `.spmignore` 来过滤掉不需要的文件，格式同 [.gitignore](http://git-scm.com/docs/gitignore)。
 
 ## 贡献
 
