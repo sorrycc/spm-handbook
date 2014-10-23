@@ -1,6 +1,6 @@
 # 应用 BootStrap
 
-## Demo
+## 演示
 
 ![](http://gtms04.alicdn.com/tps/i4/TB1HvHWFVXXXXcrXFXXuxvuIVXX-600-405.gif)
 

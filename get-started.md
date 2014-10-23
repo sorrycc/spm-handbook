@@ -29,7 +29,7 @@ $ npm install spm -g
 
 ## 使用
 
-> 以下是组件开发的入门，你也可以直接跳到[应用开发](develop-project/README.html)。
+> 以下是组件开发的使用入门，你也可以直接跳到[项目开发](develop-project/README.html)。
 
 初始化组件：
 

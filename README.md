@@ -19,11 +19,10 @@
   * [引入模板](develop-package/include-template.md)
   * [引入组件内部文件](develop-package/include-package-files.md)
   * 组件类型
-* [应用开发](develop-project/README.md)
+* [项目开发](develop-project/README.md)
   * [应用 Bootstrap](develop-project/using-bootstrap.md)
   * [调试：spm-server](develop-project/spm-server.md)
   * 调试：seajs-wrap
-  * 部署
 * 构建
   * 标准构建
   * 构建过程详解

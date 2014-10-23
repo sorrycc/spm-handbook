@@ -1,12 +1,26 @@
-# 应用开发
+# 项目开发
 
-## Demo
+> 由于目前 spm 更侧重于解决组件方面的问题，项目开发的工具（比如 [spm-server](https://github.com/spmjs/spm-server) 、部署、项目的脚手架等) 并没有内置到 spm 中，需额外安装。
+
+## 演示
 
 ![](http://gtms04.alicdn.com/tps/i4/TB1iN.pGXXXXXa3XpXXDs3XUXXX-699-360.gif)
 
+## 目录结构
+
+```
+helloworld
+  ├─ dist/         (构建生成的目录，用于发布和部署)
+  ├─ spm_modules/  (依赖组件安装后所在目录)
+  ├─ index.js
+  ├─ index.css
+  ├─ index.html
+  ├─ package.json  (配置文件，详见 package.json/README.html)
+```
+
 ## 开发
 
-新建 `package.json`：
+编辑 `package.json`：
 
 ```javascript
 {
@@ -22,40 +36,50 @@
 }
 ```
 
-安装依赖：`jquery` 和 `normalize.css`
+> output 用于声明哪些文件需要构建，buildArgs 用于配置构建选项，详见 [package.json](package.json/README.md) 。
 
-```bash
-$ spm install jquery normalize.css --save
-```
-
-新建 `index.js`：
+编辑 `index.js`：
 
 ```javascript
 var $ = require('jquery');
-
 $('body').append('<div>Hello World!</div>');
 ```
 
-新建 `index.css`：
+编辑 `index.css`：
 
 ```css
 @import 'normalize.css';
-
 div {
   color: red;
 }
 ```
 
-新建 `index.html`：
+编辑 `index.html`：
 
 ```html
 <link rel="stylesheet" href="index.css" />
 <script src="index.js"></script>
 ```
 
-## 调试
+## 安装依赖
 
-`spm-server` 是 spm 的应用调试工具，并且封装了一些常用的调试功能，比如 `livereload`, `https`，`less` 和 `coffee` 等预编译语言等，详见 [spm-server](spm-server.md)。
+在项目目录中执行命令：
+
+```bash
+$ spm install jquery normalize.css --save
+```
+
+spm install 命令会从 `源：spmjs.io` 上下载依赖的组件，并保存到 `spm_modules` 下，结构如下：
+
+```
+spm_modules
+  ├─ jquery/2.1.1/
+  ├─ normalize.css/3.0.1/
+```
+
+## 本地调试
+
+`spm-server` 是 spm 的本地调试工具之一，封装了不少常用的调试功能。比如 `livereload`, `https`，`less` 和 `coffee` ，详见 [spm-server 文档](spm-server.md) 。
 
 ```bash
 $ npm install spm-server -g
@@ -63,52 +87,43 @@ $ spm-server
          server: listen on 8000
 ```
 
-然后在浏览器里打开 http://localhost:8000 。
+启动成功后，在浏览器里打开 http://localhost:8000 即可看到效果。
 
+> 通过 `spm-server --livereload` 可开启 livereload 模式 (监听文件改动并自动刷新)
 
 ## 构建
 
+在项目目录中执行命令：
+
 ```bash
 $ spm build
-
-          start: build helloworld@0.1.0
-      arguments: dest = dist
-      arguments: cwd = $CWD
-      arguments: include = standalone
-      arguments: ignore =
-      arguments: skip =
-      arguments: idleading = {{name}}/{{version}}
-      arguments: install = true
-        install: normalize.css@3.0.1
-          found: normalize.css@3.0.1
-        install: jquery@2.1.1
-          found: jquery@2.1.1
-        package: analyse infomation
-        package: dependencies: normalize.css,jquery
-        package: files: index.js,index.css
-         output: files: index.js,index.css
-          start: task clean
-            end: task clean
-          start: task build
-           size: index.js 29.07kB (gzipped)
-           size: index.css 0.88kB (gzipped)
-           size: total 29.95kB (gzipped)
-            end: task build
-         finish: build helloworld@0.1.0 (3080ms)
 ```
+
+该命令会分析 package.json，对 output 中指定的文件进行 CMD 转换、压缩等处理，然后输出到 `dist` 目录。
+
+构建后 `dist` 的目录结构如下：
 
 ```bash
-$ tree dist
 dist
-`-- helloworld
-    `-- 0.1.0
-        |-- index-debug.css
-        |-- index-debug.js
-        |-- index.css
-        `-- index.js
+  ├─ helloworld/0.1.0/
+    ├─ index-debug.css
+    ├─ index-debug.js
+    ├─ index.css
+    ├─ index.js
 ```
 
-## Tips
+> `dist` 目录路径中会包含版本号，通过版本化的非覆盖式发布可解决静态资源缓存更新、灰度发布、快速回滚、保留历史版本等问题。
 
-1. 可以通过 `spm-server --livereload` 开启 livereload 模式
+## 部署和发布
+
+`dist` 下的文件是用于发布的，把里面的文件传到服务器上即可。
+
+> 如果需要 zip 包，可执行 `spm build --zip` 命名，在构建之后自动压缩 dist 目录。
+
+## Congratulation
+
+至此，你应该已学会如何用 spm 构建一个简单的项目了吧。继续阅读：
+
+* [应用 bootstrap](develop-project/using-bootstrap.md)
+* [spm-server 使用文档](develop-project/spm-server.md)
 
