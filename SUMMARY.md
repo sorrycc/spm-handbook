@@ -8,7 +8,7 @@
   * [引入 CSS](develop-package/include-css.md)
   * [引入模板](develop-package/include-template.md)
   * [引入组件内部文件](develop-package/include-package-files.md)
-  * [组件类型](develop-package/package-type.md)
+  * [迁移到 SPM3](develop-package/migrate-to-spm3.md)
 * [应用开发](develop-project/README.md)
   * [应用 Bootstrap](develop-project/using-bootstrap.md)
   * [spm-server](develop-project/spm-server.md)
