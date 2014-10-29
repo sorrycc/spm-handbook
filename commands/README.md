@@ -3,56 +3,56 @@
 
 ---
 
-`spm` have a collection of commands for package lifecycle management.
+`spm` 有一系列的命令来管理组件的生命周期。
 
-There is a simple list of them, and you can type `spm help [command]` to learn more details.
+下面是简单的列表，你可以执行 `spm help [command]` 查看详细信息。
 
-![](https://i.alipayobjects.com/i/localhost/png/201405/2alMyZIHqB.png)
+![](http://gtms01.alicdn.com/tps/i1/TB1x4aMGFXXXXXLXVXXM_30QpXX-830-704.png)
 
-#### spm init
-Init a package from template.
+## spm init
+通过模板生产组件的脚手架。
 
-#### spm login
-Login for getting permission.
+## spm login
+登录，获取组件发布权限。
 
-#### spm install `[name[@version]]`
-Install dependencies and engines to local folder.
+## spm install `[name[@version]]`
+安装依赖到本地目录。
 
-#### spm publish
-Publish a package.
+## spm publish
+发布组件。
 
-#### spm unpublish `[name[@version]]`
-Unpublish a package.
+## spm unpublish `[name[@version]]`
+撤销组件发布。
 
-#### spm info `[name[@version]]`
-Show information by package name.
+## spm tree
+显示组件的依赖树。
 
-#### spm search `[query]`
-Search packages.
+## spm info `[name[@version]]`
+通过名字查询组件信息。
 
-#### spm tree
-Show the dependencies tree of the package.
+## spm search `[query]`
+搜索组件。
 
-#### spm doc `[build|watch|publish]`
-Documentation management toolkit.
+## spm test
+通过 phantomjs 跑测试用例。
+
+## spm doc `[build|watch|publish]`
+文档管理工具集。
 
 * spm doc build
 
-  Build a demo package to `_site` folder.
+  构建文档到 `_site` 文件夹。
 
 * spm doc watch
 
-  Build and start a watching server at http://127.0.0.1:8000.
+  构建文档，并启动监听服务，地址是：http://127.0.0.1:8000 。
 
 * spm doc publish
 
-  Publish `_site` folder to [spmjs.io](http://spmjs.io/). The demo url is `http://spmjs.io/docs/{{package-name}}`
+  发布 `_site` 文件夹到 [spmjs.io](http://spmjs.io/) ， Demo url 是 `http://spmjs.io/docs/{{package-name}}` 。
 
-#### spm test
-Run test case in phantomjs.
-
-#### spm build
-Build package for browser.
+## spm build
+构建组件。
 
 * -O [dir] `output directory, default: dist`
 * --include [include] `determine which files will be included, optional: relative, all, standalone`
@@ -79,4 +79,7 @@ Build package for browser.
 
 * --ignore [ignore] `determine which id will not be transported`
 * --idleading [idleading] `prefix of module name, default: {{name}}/{{version}}`
+
+## spm completion
+spm 命令自动完成脚本，可通过 `npm completion >> ~/.bashrc  (or ~/.zshrc)` 安装。
 
