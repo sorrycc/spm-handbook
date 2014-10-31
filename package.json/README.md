@@ -1,7 +1,5 @@
 # Package.json
 
----
-
 `spm` 使用和 `npm` 基本一致的 `package.json` 来描述组件。除了包含一些特殊配置的 `spm` 域之外，其他都和 `npm` 保持一致。
 
 ### Fields

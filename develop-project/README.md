@@ -6,6 +6,13 @@
 
 ![](http://gtms04.alicdn.com/tps/i4/TB1iN.pGXXXXXa3XpXXDs3XUXXX-699-360.gif)
 
+## 基本流程
+
+1. 建 package.json
+2. 开发和用 `spm install` 安装依赖
+3. 用 `spm-server` 调试
+4. 部署和发布
+
 ## 目录结构
 
 ```
@@ -118,7 +125,7 @@ dist
 
 `dist` 下的文件是用于发布的，把里面的文件传到服务器上即可。
 
-> 如果需要 zip 包，可执行 `spm build --zip` 命名，在构建之后自动压缩 dist 目录。
+> 如果需要 zip 包，可执行 `spm build --zip` 命令，在构建之后自动压缩 dist 目录。
 
 ## Congratulation
 

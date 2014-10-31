@@ -1,7 +1,5 @@
 # 组件开发
 
----
-
 下面会一步步教你如何通过 [spm](https://github.com/spmjs/spm) 来开发一个组件。
 
 ```

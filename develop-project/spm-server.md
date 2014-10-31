@@ -5,9 +5,21 @@
 
 基于 [serve-spm](https://github.com/spmjs/serve-spm) 的 SPM3 本地调试工具，同时也内置了一些路径映射，可以很方便地进行线上调试。
 
+## DEMO
+
+在`我的支付宝`页面调试 `arale-tip` 组件：
+
+![](https://t.alipayobjects.com/images/T10QJcXodWXXXXXXXX.gif)
+
+## 安装
+
+```bash
+$ npm install spm-server -g
+```
+
 ## 特性
 
-- 支持 `combo` 解析和代理
+- 支持 `??` 协议的 `combo` 解析和代理
     
     比如请求 `/??a.js,b.js`，本地只有 `a.js`，没有 `b.js`，则会从 CDN 上获取 `b.js`，和 `a.js` 合并后输出。
 

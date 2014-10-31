@@ -12,4 +12,8 @@
 * [项目开发](develop-project/README.md)
   * [应用 Bootstrap](develop-project/using-bootstrap.md)
   * [spm-server](develop-project/spm-server.md)
+  * [应对不同的项目类型](develop-project/strategy.md)
+* [构建](build/README.md)
 * [命令行](commands/README.md)
+* [源](registry/README.md)
+    * [私有源](registry/private.md)

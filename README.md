@@ -4,7 +4,12 @@
 
 ## 阅读
 
-- [gitbook.io](sorrycc.gitbooks.io/spm-handbook/)
+- [gitbook.io](http://sorrycc.gitbooks.io/spm-handbook/)
+
+## 名词解释
+
+- `源`，详见 [源](yuan/README.md)
+- `组件`，指可以发布到源上的包，比如 [type 组件](http://spmjs.io/package/type)
 
 ## 目录
 
@@ -14,14 +19,14 @@
 * [环境配置](environment.md)
 * [package.json](package.json/README.md)
   * [buildArgs](package.json/buildArgs.md)
+* [项目开发](develop-project/README.md)
+  * [应用 Bootstrap](develop-project/using-bootstrap.md)
+  * [调试：spm-server](develop-project/spm-server.md)
 * [组件开发](develop-package/README.md)
   * [引入样式](develop-package/include-css.md)
   * [引入模板](develop-package/include-template.md)
   * [引入组件内部文件](develop-package/include-package-files.md)
   * [组件类型](develop-package/package-type.md)
-* [项目开发](develop-project/README.md)
-  * [应用 Bootstrap](develop-project/using-bootstrap.md)
-  * [调试：spm-server](develop-project/spm-server.md)
   * 调试：seajs-wrap
 * 构建
   * 标准构建
@@ -31,7 +36,6 @@
   * grunt
 * [命令行](commands/README.md)
 * 搭建你的私有源
-* 扩展 SPM
 
 ## 贡献
 

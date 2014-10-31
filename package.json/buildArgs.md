@@ -20,7 +20,9 @@ all | 打包所有依赖
 standalone | 打包所有依赖并可自运行
 umd | 在 standalone 基础上再添加 `umd wrap`
 
-举例说明下，比如有一个组件 `a/0.1.0/index.js`：
+### 举例说明
+
+比如有一个组件 `a/0.1.0/index.js`：
 
 ```javascript
 require('./relative');
