@@ -8,7 +8,7 @@
 
 ## 名词解释
 
-- `源`，详见 [源](yuan/README.md)
+- `源`，详见 [源](registry/README.md)
 - `组件`，指可以发布到源上的包，比如 [type 组件](http://spmjs.io/package/type)
 
 ## 贡献
