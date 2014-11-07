@@ -43,7 +43,7 @@ helloworld
 }
 ```
 
-> output 用于声明哪些文件需要构建，buildArgs 用于配置构建选项，详见 [package.json](package.json/README.md) 。
+> output 用于声明哪些文件需要构建，buildArgs 用于配置构建选项，详见 [package.json](../package.json/README.md) 。
 
 编辑 `index.js`：
 
