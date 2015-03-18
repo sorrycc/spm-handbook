@@ -17,8 +17,8 @@ body {
 此外，spm 还提供了在 JS 里引入 CSS 的功能。
 
 ```javascript
-@require 'alice-box';
-@require './theme/basic.css';
+@require('alice-box');
+@require('./theme/basic.css');
 ```
 
 > 通过这种方式引入 CSS 之后，构建时候会自动安装 [import-style](http://spmjs.io/package/import-style)，来加载 CSS 。
